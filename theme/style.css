@@ -1,14 +1,18 @@
 body{
-    background-color: crimson;
+    background-color: white;
+    margin: 0;
+}
+.container{
+    max-width: 750px;
+    margin: 10px auto;
 }
 li{
-    font-size: 200%;
+    font-size: 25px;
     font-family: monospace;
 }
 img{
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    border: 2px dotted lightblue;
 }
 .white-text{
     color: #ffffff;
@@ -18,3 +22,80 @@ img{
     font-style: italic;
     color: gray;
 }
+.navigation{
+    background-color: lightblue;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+}
+.navigation > ul > li{
+    margin: 10px;
+    /* Places the list inline inside the navigation bar*/
+    display: inline;
+    margin: 20px;
+    position: relative;
+}
+.navigation > ul > li:hover{
+    background-color: #0066cc;
+}
+.navigation .dropdown {
+    display: none;
+    position:absolute;
+    top:15;
+    right: 0;
+    background-color: lightblue;
+}
+.navigation a:hover + .dropdown, .dropdown:hover {
+    display: block;
+}
+
+.header{
+    background-color: pink;
+    margin-top: 150px;
+}
+.content{
+    background-color: purple;
+    margin: 50px;
+    padding: 50px;
+}
+.footer{
+    background-color: white;
+}
+.content ~ div {
+    background-color: orange;
+}
+.footer > p {
+    color: fuchsia;
+}
+#funkyList{
+    background-color: tomato;
+}
+/* to select first child in funklist*/
+#funkyList li:first-child{
+    background-color: firebrick;
+}
+#funkyList li:last-child{
+    background-color: pink;
+}
+#funkyList li:nth-child(2){
+    background-color: red;
+}
+#funkyList li:nth-child(3n){
+    background-color: blue;
+}
+/*Everyother line*/
+#funkyList li:nth-child(2n + 1){
+    color: white;
+}
+
+#funkyList > li:hover{
+    background-color: yellow;
+}
+
+    /*.container li:first-child{
+        color: crimson;
+    }
+    .container li:last-child{
+        color: green;
+    }*/
