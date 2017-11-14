@@ -1,13 +1,17 @@
 /* eslint-disable no-console*/
 var hello = "hello";
-var userName = prompt( "What's your name?" );
+var originalName = prompt( "What's your name?" );
 
-var checkUserName = function checkUserName(){
+var checkUserName = function checkUserName( userName ){
     if( !userName || userName === " " ){
         userName = prompt( "What's your name? for real Bro!" );
-        checkUserName();
+        checkUserName( userName );
+    }
+    else{
+        originalName = userName;
     }
 };
 
-checkUserName();
-alert( hello + " " + userName );
+checkUserName( originalName );
+
+document.querySelector( "h3" ).textContent = "Hello, " + originalName;
