@@ -14,4 +14,6 @@ var checkUserName = function checkUserName( userName ){
 
 checkUserName( originalName );
 
-document.querySelector( "h3" ).textContent = "Hello, " + originalName;
+document
+    .querySelector( "h3" )
+    .outerHTML = "<h1>Hello, " + originalName + "</h1>";
