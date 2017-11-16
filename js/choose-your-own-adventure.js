@@ -1,15 +1,15 @@
 var story = {
     "start": {
         "text": "Back in 1964 in old backwoods Vacherie, LA where the air is muggy and the alligators run wild. You stand on the bank of the swamp. Would you like to 'jump' in or 'walk' to the river road?",
-        "choice": [ "walk", "jump" ]
+        "choices": [ "walk", "jump" ]
     },
     "jump": {
         "text": "You jump into the swamp and swim 10 feet out and you encounter a massive 13ft alligator beaming down on your nose. Do you 'bite' the alligator or 'swim away?",
-        "choice": [ "bite", "swim" ]
+        "choices": [ "bite", "swim" ]
     },
     "walk": {
-        "text": "You quickly walk away and head down the river road.  Cars are zooming by.  You come across a guy fixin' his bike. Do you 'speak' to him or 's' him?",
-        "choice": [ "speak", "skip" ]
+        "text": "You quickly walk away and head down the river road.  Cars are zooming by.  You come across a guy fixin' his bike. Do you 'speak' to him or 'skip' him?",
+        "choices": [ "speak", "skip" ]
     },
     "bite": {
         "text": "Oh you dead!  BYE BYE!!!"
@@ -28,46 +28,23 @@ var story = {
 
 var runStory = function runStory( branch ){
     var chapter = story[branch];
-    var choice = prompt( chapter.text );
-    var choices = chapter.choice;
+    var choices = chapter.choices;
+    var choice;
 
-    if( choice === choices[1] ){
-        choice = prompt( story[choice].text );
+    if( choices ){
+        choice = prompt( chapter.text );
 
-        if( choice === "bite" ){
-            document
-                .querySelector( "#output" )
-                .textContent = story[choice].text;
-        }
-        else if( choice === "swim" ){
-            document
-                .querySelector( "#output" )
-                .textContent = story[choice].text;
+        if( choice === choices[0] || choice === choices[1] ){
+            runStory( choice );
         }
         else{
-            runStory( choices[0] );
-        }
-    }
-    else if( choice === choices[0] ){
-        choice = prompt( story[choice].text );
-        if( choice === "speak" ){
-            document
-                .querySelector( "#output" )
-                .textContent = story[choice].text;
-        }
-        else if( choice === "skip" ){
-            document
-                .querySelector( "#output" )
-                .textContent = story[choice].text;
-        }
-        else{
-            document
-                .querySelector( "#output" )
-                .textContent = "You'll walk forever!";
+            runStory( branch );
         }
     }
     else{
-        runStory( branch );
+        document
+            .querySelector( "#output" )
+            .textContent = chapter.text;
     }
 };
 
