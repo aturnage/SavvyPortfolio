@@ -9,7 +9,7 @@ var story = {
     },
     "walk": {
         "text": "You quickly walk away and head down the river road.  Cars are zooming by.  You come across a guy fixin' his bike. Do you 'speak' to him or 'skip' him?",
-        "choices": [ "speak", "skip" ]
+        "choices": [ "speak", "skip", "bite" ]
     },
     "bite": {
         "text": "Oh you dead!  BYE BYE!!!"
@@ -29,12 +29,20 @@ var story = {
 var runStory = function runStory( branch ){
     var chapter = story[branch];
     var choices = chapter.choices;
+    var isValidChoice = false;
     var choice;
 
     if( choices ){
         choice = prompt( chapter.text );
 
-        if( choice === choices[0] || choice === choices[1] ){
+        // Validate choices
+        for( var i = 0; i < choices.length; i++ ){
+            if( choice === choices[i] ){
+                isValidChoice = true;
+            }
+        }
+
+        if( isValidChoice ){
             runStory( choice );
         }
         else{

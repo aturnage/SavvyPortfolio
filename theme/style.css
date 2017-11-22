@@ -127,3 +127,8 @@ input[type="text"]{
 input[type="checkbox"]{
     margin: 40px;
 }
+#output{
+    background-color: crimson;
+    font-family: sans-serif;
+    font-size: 26px;
+}
