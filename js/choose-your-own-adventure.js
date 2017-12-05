@@ -4,7 +4,7 @@ var story = {
         "choices": [ "walk", "jump" ]
     },
     "jump": {
-        "text": "You jump into the swamp and swim 10 feet out and you encounter a massive 13ft alligator beaming down on your nose. Do you 'bite' the alligator or 'swim away?",
+        "text": "You jump into the swamp and swim 10 feet out and you encounter a massive 13ft alligator beaming down on your nose. Do you 'bite' the alligator or 'swim' away?",
         "choices": [ "bite", "swim" ]
     },
     "walk": {
@@ -25,35 +25,91 @@ var story = {
     }
 };
 
+// function validateChoice( choice, choices ){
+//     var isValidChoice = false;
+//
+//     choices.forEach((validChoice) => {
+//         if( choice === choices[i] ){
+//             isValidChoice = true;
+//         }
+//     });
+//     // for( let i = 0; i < choices.length; i++ ){
+//     //     if( choice === choices[i] ){
+//     //         isValidChoice = true;
+//     //     }
+//     // }
+//
+//     return isValidChoice;
+// }
 
-var runStory = function runStory( branch ){
-    var chapter = story[branch];
-    var choices = chapter.choices;
-    var isValidChoice = false;
-    var choice;
+function handleChoices( chapter, branch ){
+    $( "#output" ).text( chapter.text );
 
-    if( choices ){
-        choice = prompt( chapter.text );
+    /* How can you respond to user input? On should only happen once...Think of
+    deconstructing handleChoices function*/
 
-        // Validate choices
-        for( var i = 0; i < choices.length; i++ ){
-            if( choice === choices[i] ){
-                isValidChoice = true;
+    $( "#input" ).sumbit(
+        "keyup",
+        ( event ) => {
+            var option =  $( event.target ).val();
+
+            if( chapter.choices.some( ( validChoice ) => choice === validChoice ) ){
+                runStory( choice ); // choice is undefined due to the change of the prompt
+            }
+            else{
+                runStory( branch );
             }
         }
 
-        if( isValidChoice ){
-            runStory( choice );
-        }
-        else{
-            runStory( branch );
-        }
+    );
+}
+
+
+function runStory( branch ){
+    var chapter = story[branch];
+
+    if( chapter.choices ){
+        handleChoices( chapter, branch );
     }
     else{
         document
             .querySelector( "#output" )
             .textContent = chapter.text;
     }
-};
+}
 
 runStory( "start" );
+
+
+// The original code
+// var runStory = function runStory( branch ){
+//     var chapter = story[branch];
+//     var choices = chapter.choices;
+//     var isValidChoice = false;
+//     var choice;
+//
+//     if( choices ){
+//         choice = prompt( chapter.text );
+//
+//         // Validate choices
+//         for( var i = 0; i < choices.length; i++ ){
+//             if( choice === choices[i] ){
+//                 isValidChoice = true;
+//             }
+//         }
+//
+//         if( isValidChoice ){
+//             runStory( choice );
+//         }
+//         else{
+//             runStory( branch );
+//         }
+//     }
+//     else{
+//         document
+//             .querySelector( "#output" )
+//             .textContent = chapter.text;
+//     }
+// };
+//
+// runStory( "start" );

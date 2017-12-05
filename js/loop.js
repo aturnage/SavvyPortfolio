@@ -27,7 +27,10 @@ var fizzBuzzFor = function fizzBuzzFor( limit ){
 
 var problemTwo = function problemTwo(){
     /* places all li in an array*/
-    var listArray = document.querySelectorAll( "li" );
+    var listItems = document.querySelectorAll( "li" );
+    var listArray = Array.from( listItems );
+
+    listArray.forEach( ( li, x ) => li.textContent = x + 1  );
 
     for( var x = 0; x < listArray.length; x++ ){
         listArray[x].textContent = x + 1;
@@ -48,7 +51,7 @@ var problemThree = function problemThree(){
     }
 };
 
-fizzBuzzFor( 50 );
+fizzBuzzFor();
 problemTwo();
 problemThree();
 
