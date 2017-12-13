@@ -48,13 +48,13 @@ function handleChoices( chapter, branch ){
     /* How can you respond to user input? On should only happen once...Think of
     deconstructing handleChoices function*/
 
-    $( "#input" ).sumbit(
+    $( "#inputChoose" ).sumbit(
         "keyup",
         ( event ) => {
             var option =  $( event.target ).val();
 
-            if( chapter.choices.some( ( validChoice ) => choice === validChoice ) ){
-                runStory( choice ); // choice is undefined due to the change of the prompt
+            if( chapter.choices.some( ( validChoice ) => option === validChoice ) ){
+                runStory( option  ); // choice is undefined due to the change of the prompt
             }
             else{
                 runStory( branch );

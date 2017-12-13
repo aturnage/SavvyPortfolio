@@ -18,59 +18,107 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }*/
-
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
 body{
     background-color: white;
     margin: 0;
+}
+img{
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 .container{
     max-width: 750px;
     margin: 10px auto;
 }
-li{
-    font-size: 25px;
-    font-family: monospace;
-}
-img{
-    display: block;
-    border: 2px dotted lightblue;
-}
-.white-text{
-    color: #ffffff;
-}
-#subheader{
-    font-weight: 500;
-    font-style: italic;
-    color: gray;
-}
 .navigation{
-    background-color: lightblue;
+    display: flex;
+    flex-direction: row-reverse;
     position: fixed;
     top: 0;
     right: 0;
-    width: 100vw;
+    width: 100%;
+    font-family: 'Inconsolata';
+    text-transform: uppercase;
+}
+.navigation li {
+    list-style: none;
+}
+.navigation > ul {
+    text-decoration: none;
 }
 .navigation > ul > li{
-    margin: 10px;
-    /* Places the list inline inside the navigation bar*/
+    margin: 5px;
     display: inline;
-    margin: 20px;
     position: relative;
+    list-style: none;
 }
 .navigation > ul > li:hover{
-    background-color: #0066cc;
+
 }
 .navigation .dropdown {
     display: none;
     position:absolute;
     top:15;
     right: 0;
-    background-color: lightblue;
 }
 .navigation a:hover + .dropdown, .dropdown:hover {
     display: block;
 }
+.topBackground > img{
+    width: 100%;
+    /*background-image: url("../images/header-pic-color-web-blue.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    /*min-width: 340px;*/
+}
+.topPicVerbiage{
 
+}
+.nameTitle {
+    width: 100%;
+}
+.fullName {
+    text-align: left;
+    font-size: 38px;
+}
+.nameTitle p {
+    color: #0099ff;
+    text-align: center;
+}
+.skills {
+    text-transform: uppercase;
+}
+.titleText {
+    padding: 10px 20px;
+}
+
+.titleContainer {
+    width: 100%;
+    text-align: center;
+    background-color: #0099ff;
+    color: white;
+    font-family: 'Inconsolata';
+    text-transform: uppercase;
+
+    /* border: solid 1px #0099ff; */
+}
+.list {
+    /* padding: 5px; */
+    display: none;
+    background-color: #0099ff;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Inconsolata';
+    font-size: 12px;
+}
+.imageSize {
+    width: 100%;
+}
 .header{
     background-color: pink;
     margin-top: 150px;
@@ -92,7 +140,7 @@ img{
 #funkyList{
     background-color: tomato;
 }
-/* to select first child in funklist*/
+
 #funkyList li:first-child{
     background-color: firebrick;
 }
@@ -132,6 +180,7 @@ input[type="checkbox"]{
     font-family: sans-serif;
     font-size: 26px;
 }
-#input{
+#inputChoose{
     max-width: 100%;
+    margin: 10px;
 }

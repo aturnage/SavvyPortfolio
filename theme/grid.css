@@ -1,17 +1,33 @@
-#grid{
+#grid {
     display: grid;
+}
+#grid > div:first-child{
+    grid-column: 1 / -1;
 }
 #grid > div {
     background-color: hotpink;
     padding: 1em;
     margin: .25em;
 }
-#grid > div:first-child{
-    grid-column: 1 / -1;
+.topPicVerbiage{
+    display: grid;
+    /*justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;*/
+    /*font-family: "Alfa Slab One";*/
+    /*font-family: "Abril Fatface";
+    font-size: 20px;*/
+    /*background-color: #0099ff;*/
 }
+.topPicVerbiage > div {
 
+}
 @media (min-width: 415px){
     #grid{
         grid-template-columns: repeat(3, 1fr);
+    }
+    .topPicVerbiage{
+        grid-template-columns: repeat(6, 1fr);
     }
 }
