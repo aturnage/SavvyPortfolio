@@ -1,11 +1,13 @@
 #grid {
     display: grid;
+    background-image: url("/images/white-background.jpg");
+    background-size: cover;
 }
 #grid > div:first-child{
     grid-column: 1 / -1;
 }
 #grid > div {
-    background-color: hotpink;
+    /* background-color: hotpink; */
     padding: 1em;
     margin: .25em;
 }
@@ -30,4 +32,11 @@
     .topPicVerbiage{
         grid-template-columns: repeat(3, 1fr);
     }
+}
+.imageAtt {
+    width: 100%;
+}
+#sampleHeader{
+    text-align: center;
+    color: #0099ff;
 }
