@@ -137,6 +137,8 @@ a {
     text-align: center;
     padding: 0;
     border: 2px solid #0099ff;
+    background-image: url("/images/white-background.jpg");
+    background-size: cover;
 }
 .imageSize {
     width: 100%;
@@ -149,15 +151,19 @@ a {
     width: 100%
 }
 #initialQuestion {
-    color: #0099ff;
+    color: white;
     font-family: 'Inconsolata';
     font-size: 40px;
     text-align: center;
+    padding: 2% 0 0 0;
 }
 #output {
-    color: white;
-    text-align: center;
+    color: #383838;
+    text-align: left;
     padding: 10px 0 0 0;
+    margin: 0 auto;
+    max-width: 750px;
+    font-size: 20px;
 }
 #inputChoose {
     margin: 3% 0 0 42%;
@@ -165,7 +171,8 @@ a {
 #enter {
     color: #0099ff;
     text-align: center;
-    margin: 25px;
+    padding: 0 0 3% 0;
+    text-transform: uppercase;
 }
 /* .header{
     background-color: pink;

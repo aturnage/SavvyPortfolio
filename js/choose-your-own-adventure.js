@@ -2,22 +2,23 @@
 
 var story = {
     "start": {
-        "text": " ",
-        "choices": [ "walk", "jump" ]
+        "text": "'Every day is an opportunity to do better than you did yesterday.' ... My goal to be better than I was the day prior. Everyday I wake up with a fire to be creative, think outside the box, and bring my best effort to making a difference in the world. To assist my progress I have obtained traditional and non-traditional education.  Enter: <strong>Traditional</strong> or <strong>Non-Traditional</strong>  " ,
+        "choices": [ "Trad", "Non" ]
     },
-    "jump": {
-        "text": "You jump into the swamp and swim 10 feet out and you encounter a massive 13ft alligator beaming down on your nose. Do you 'bite' the alligator or 'swim' away?",
-        "choices": [ "bite", "swim" ]
+    "Trad": {
+        "text": "I graduated with a B.S. in Business Administration with an emphasis in Marketing from Missouri Westerm State University.  Obtained my MBA with an emphasis in Advertising from Lindenwood University. So, what's next? Enter <strong>Next</strong>",
+        "choices": [ "Next", "swim" ]
     },
-    "walk": {
-        "text": "You quickly walk away and head down the river road.  Cars are zooming by.  You come across a guy fixin' his bike. Do you 'speak' to him or 'skip' him?",
-        "choices": [ "speak", "skip", "bite" ]
+    "Non": {
+        "text": "I graduated from <i>Savvy Coders</i> (60 hour Code Bootcamp) focused on front-end web development.  I learned a basline of code languages: javascript, JQuery, HTML, CSS.  How to mine data using loops (for, while, forEach, map, and filer), implement API's and JSON to parse data from outside sources. <i>LaunchCode</i> (23 week code bootcamp) where I learned fundatmentals in coding languages: Python, SQL for database management, Javascript, JQuery, API's, adn JSON. So, what's next? enter <strong>Next</strong>",
+        "choices": [ "Next" ]
     },
-    "bite": {
-        "text": "Oh you dead!  BYE BYE!!!"
+    "Next": {
+        "text": "I would like to continue to advance my coding skills to create dynamic front-end & back-end web applications. Along with my business background I hope to have a successful career in the IT Industry. Enter <strong>End</strong>",
+        "choices": [ "End" ]
     },
-    "swim": {
-        "text": "You try your best to swim away but the alligator eats you...Oh You dead!  BYE BYE!",
+    "End": {
+        "text": "Thank you for taking time to dig deeper into me.  Hope you enjoyed!",
     },
     "speak": {
         "text": "Don't talk to strangers.  He hit you with a pipe and stole your wallet!"

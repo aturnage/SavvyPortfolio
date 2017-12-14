@@ -12,10 +12,14 @@ $( "#input" ).on(
 );
 
 $( "li" ).on( "mouseenter", ( event ) => {
-    $( event.target ).css( "background-color", "blue" );
+    $( event.target )
+        .css( "background-color", "#0099ff" )
+        .css( "color", "white" );
 } );
 $( "li" ).on( "mouseleave", ( event ) => {
-    $( event.target ).css( "background-color", "transparent" );
+    $( event.target )
+        .css( "background-color", "transparent" )
+        .css( "color", "gray" );
 } );
 // var hello = "hello";
 // var originalName = prompt( "What's your name?" );
