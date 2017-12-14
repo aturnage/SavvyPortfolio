@@ -42,44 +42,42 @@ var story = {
 //     return isValidChoice;
 // }
 
-function handleChoices( chapter, branch ){
-    $( "#output" ).text( chapter.text );
+var $choice = $( "#inputChoose" );
 
-    /* How can you respond to user input? On should only happen once...Think of
-    deconstructing handleChoices function*/
 
-    $( "#inputChoose" ).sumbit(
-        "keyup",
-        ( event ) => {
-            var option =  $( event.target ).val();
+function validateChoice( choice, choices ){
+    var isValidChoice = choice.isValidChoice;
 
-            if( chapter.choices.some( ( validChoice ) => option === validChoice ) ){
-                runStory( option  ); // choice is undefined due to the change of the prompt
-            }
-            else{
-                runStory( branch );
-            }
+    for( let i = 0; i < choices.length; i++ ){
+        if( choice === choices[i] ){
+            isValidChoice = true;
         }
+    }
 
-    );
+    return isValidChoice;
 }
 
 
 function runStory( branch ){
     var chapter = story[branch];
 
-    if( chapter.choices ){
-        handleChoices( chapter, branch );
-    }
-    else{
-        document
-            .querySelector( "#output" )
-            .textContent = chapter.text;
-    }
+    $choice.on( "keyup", ( event ) => {
+        var userInput = $( event.target ).val();
+
+        if( validateChoice( userInput, chapter.choices ) ){
+            $choice.off( "keyup" );
+            $choice.val( "" );
+            runStory( userInput );
+        }
+    } );
+    console.log( "event" );
+    document
+        .querySelector( "#output" )
+        .innerHTML = chapter.text;
 }
 
-runStory( "start" );
-
+// runStory( "start" );
+$( "#button" ).on( "click", () => runStory( "start" ) );
 
 // The original code
 // var runStory = function runStory( branch ){

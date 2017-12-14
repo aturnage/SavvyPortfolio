@@ -81,20 +81,28 @@ a {
 }
 .nameTitle {
     width: 100%;
+    background-color: #0099ff;
 }
 .fullName {
     text-align: left;
     font-size: 38px;
+    font-family: 'Inconsolata';
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .nameTitle p {
-    color: #0099ff;
+    color: #ffffff;
     text-align: center;
+    margin: 0;
+    padding: 3% 0 0 0;
 }
 .skills {
     text-transform: uppercase;
+    font-family: 'Inconsolata';
 }
 .titleText {
-    padding: 10px 20px;
+    /* padding: 10px 0; */
+    color: white;
 }
 
 .titleContainer {
