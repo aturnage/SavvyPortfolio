@@ -2,7 +2,7 @@
 
 var story = {
     "start": {
-        "text": "Back in 1964 in old backwoods Vacherie, LA where the air is muggy and the alligators run wild. You stand on the bank of the swamp. Would you like to 'jump' in or 'walk' to the river road?",
+        "text": "Back in 1964 in old backwoods Vacherie, LA where the air is muggy and the alligators run wild. You stand on the bank of the swamp. Would you like to <strong>jump</strong> in or 'walk' to the river road?",
         "choices": [ "walk", "jump" ]
     },
     "jump": {

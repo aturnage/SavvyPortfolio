@@ -10,7 +10,7 @@
     margin: .25em;
 }
 .topPicVerbiage{
-    display: grid;
+    /* display: grid; */
     /*justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -28,6 +28,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .topPicVerbiage{
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }

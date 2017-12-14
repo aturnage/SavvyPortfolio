@@ -29,7 +29,7 @@ img{
 }
 a {
     text-decoration: none;
-    color: white;
+    color: gray;
 }
 .container{
     max-width: 750px;
@@ -47,8 +47,8 @@ a {
 
 }
 .navigation li {
-    list-style: none;
-
+    /* list-style: none; */
+    background-color: transparent;
 }
 .navigation > ul {
     text-decoration: none;
@@ -59,6 +59,7 @@ a {
     position: relative;
     list-style: none;
     color: #0099ff;
+    font-size: 20px;
 }
 .navigation > a {
      color: #0099ff;
@@ -71,7 +72,6 @@ a {
 }
 .navigation a:hover + .dropdown, .dropdown:hover {
     display: block;
-    color: #0099ff;
 }
 .topBackground > img{
     width: 100%;
@@ -79,9 +79,6 @@ a {
     background-repeat: no-repeat;
     background-size: cover;*/
     /*min-width: 340px;*/
-}
-.topPicVerbiage{
-
 }
 .nameTitle {
     width: 100%;
@@ -105,33 +102,41 @@ a {
     font-family: 'Inconsolata';
 }
 .titleText {
-    /* padding: 10px 0; */
     color: white;
 }
 
 .titleContainer {
     width: 100%;
     text-align: center;
-    background-color: #0099ff;
-    color: white;
+    /* background-color: #0099ff; */
+    color: #0099ff;
     font-family: 'Inconsolata';
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
 
-    /* border: solid 1px #0099ff; */
+}
+.list li {
+    list-style: none;
 }
 .list {
-    /* padding: 5px; */
     display: none;
-    background-color: #0099ff;
-    color: white;
+    background-color: white;
+    color: gray;
     text-transform: uppercase;
     font-family: 'Inconsolata';
-    font-size: 12px;
+    font-size: 30px;
+    text-align: center;
+    padding: 0;
+    border: 2px solid #0099ff;
 }
 .imageSize {
     width: 100%;
 }
-.header{
+#output {
+    color: gray;
+}
+/* .header{
     background-color: pink;
     margin-top: 150px;
 }
@@ -162,11 +167,10 @@ a {
 #funkyList li:nth-child(2){
     background-color: red;
 }
-#funkyList li:nth-child(3n){
-    background-color: blue;
+
 }
 /*Everyother line*/
-#funkyList li:nth-child(2n + 1){
+/* #funkyList li:nth-child(2n + 1){
     color: white;
 }
 
@@ -174,12 +178,12 @@ a {
     background-color: yellow;
 }
 
-    /*.container li:first-child{
+    .container li:first-child{
         color: crimson;
     }
     .container li:last-child{
         color: green;
-    }*/
+    }
 
 input[type="text"]{
     background-color: tomato;
@@ -195,4 +199,4 @@ input[type="checkbox"]{
 #inputChoose{
     max-width: 100%;
     margin: 10px;
-}
+} */ */

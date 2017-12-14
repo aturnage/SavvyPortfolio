@@ -4,12 +4,13 @@
 
 
 $( document ).ready( () => {
-    $( "#flip" ).mouseenter( () => {
-        $( "#panel" ).slideDown( "slow" );
+    $( ".titleContainer" ).mouseenter( ( event ) => {
+        console.log( event );
+        $( ".list" ).slideDown( "slow" );
     } );
 } );
-$( document ).ready( () => {
-    $( "#flip" ).mouseleave( () => {
-        $( "#panel" ).slideUp( "slow" );
-    } );
-} );
+// $( document ).ready( () => {
+//     $( "#flip" ).mouseleave( () => {
+//         $( "#panel" ).slideUp( "slow" );
+//     } );
+// } );

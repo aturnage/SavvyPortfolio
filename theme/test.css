@@ -1,0 +1,16 @@
+.titleContainer {
+    width: 100%;
+    text-align: center;
+    background-color: #0099ff;
+    color: white;
+    font-family: 'Inconsolata';
+    text-transform: uppercase;
+}
+.list {
+    display: none;
+    background-color: #0099ff;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Inconsolata';
+    font-size: 12px;
+}
