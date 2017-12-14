@@ -1,3 +1,5 @@
+/* eslint-disable no-undef*/
+
 var story = {
     "start": {
         "text": "Back in 1964 in old backwoods Vacherie, LA where the air is muggy and the alligators run wild. You stand on the bank of the swamp. Would you like to 'jump' in or 'walk' to the river road?",
@@ -24,23 +26,6 @@ var story = {
         "text": "Pushing right along.  You make it home safely!"
     }
 };
-
-// function validateChoice( choice, choices ){
-//     var isValidChoice = false;
-//
-//     choices.forEach((validChoice) => {
-//         if( choice === choices[i] ){
-//             isValidChoice = true;
-//         }
-//     });
-//     // for( let i = 0; i < choices.length; i++ ){
-//     //     if( choice === choices[i] ){
-//     //         isValidChoice = true;
-//     //     }
-//     // }
-//
-//     return isValidChoice;
-// }
 
 var $choice = $( "#inputChoose" );
 
@@ -70,14 +55,34 @@ function runStory( branch ){
             runStory( userInput );
         }
     } );
-    console.log( "event" );
+
     document
         .querySelector( "#output" )
         .innerHTML = chapter.text;
 }
 
-// runStory( "start" );
 $( "#button" ).on( "click", () => runStory( "start" ) );
+
+// EVERYTHING BENIETH ARE NOTES
+
+// runStory( "start" );
+// function validateChoice( choice, choices ){
+//     var isValidChoice = false;
+//
+//     choices.forEach((validChoice) => {
+//         if( choice === choices[i] ){
+//             isValidChoice = true;
+//         }
+//     });
+//     // for( let i = 0; i < choices.length; i++ ){
+//     //     if( choice === choices[i] ){
+//     //         isValidChoice = true;
+//     //     }
+//     // }
+//
+//     return isValidChoice;
+// }
+
 
 // The original code
 // var runStory = function runStory( branch ){

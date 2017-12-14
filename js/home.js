@@ -4,11 +4,11 @@ $( document ).ready( () => {
         $( ".list" ).slideDown( "slow" );
     } );
 } );
-$( document ).ready( () => {
-    $( ".titleContainer" ).mouseleave( () => {
-        $( ".list" ).slideUp( "fast" );
-    } );
-} );
+// $( document ).ready( () => {
+//     $( ".titleContainer" ).mouseleave( () => {
+//         $( ".list" ).slideUp( "fast" );
+//     } );
+// } );
 
 // var $output = $( "#output" );
 // var $subtitle = $( "<h2>I'm a beast<h2>" );

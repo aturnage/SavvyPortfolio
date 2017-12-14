@@ -38,15 +38,17 @@ a {
 .navigation{
     display: flex;
     flex-direction: row-reverse;
-    position: fixed;
+    background-color: white:
     top: 0;
     right: 0;
     width: 100%;
     font-family: 'Inconsolata';
     text-transform: uppercase;
+
 }
 .navigation li {
     list-style: none;
+
 }
 .navigation > ul {
     text-decoration: none;
@@ -56,9 +58,10 @@ a {
     display: inline;
     position: relative;
     list-style: none;
+    color: #0099ff;
 }
-.navigation > ul > li:hover{
-
+.navigation > a {
+     color: #0099ff;
 }
 .navigation .dropdown {
     display: none;
@@ -68,6 +71,7 @@ a {
 }
 .navigation a:hover + .dropdown, .dropdown:hover {
     display: block;
+    color: #0099ff;
 }
 .topBackground > img{
     width: 100%;
