@@ -11,15 +11,25 @@ $( "#input" ).on(
     }
 );
 
-$( "li" ).on( "mouseenter", ( event ) => {
+$( ".navigation > li" ).on( "mouseenter", ( event ) => {
     $( event.target )
         .css( "background-color", "#0099ff" )
         .css( "color", "white" );
 } );
-$( "li" ).on( "mouseleave", ( event ) => {
+$( ".navigation > li" ).on( "mouseleave", ( event ) => {
     $( event.target )
         .css( "background-color", "transparent" )
         .css( "color", "gray" );
+} );
+$( ".footerGrid > li" ).on( "mouseenter", ( event ) => {
+    $( event.target )
+        .css( "background-color", "#transparent" )
+        .css( "color", "white" );
+} );
+$( ".footerGrid > li" ).on( "mouseleave", ( event ) => {
+    $( event.target )
+        .css( "background-color", "transparent" )
+        .css( "color", "darkgray" );
 } );
 // var hello = "hello";
 // var originalName = prompt( "What's your name?" );

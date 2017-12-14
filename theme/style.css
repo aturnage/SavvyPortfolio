@@ -174,6 +174,25 @@ a {
     padding: 0 0 3% 0;
     text-transform: uppercase;
 }
+.footer{
+    margin: 0;
+}
+.footerGrid li {
+    color: #383838;
+}
+.footerGrid a {
+    /* color: #383838; */
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.footerGrid a:hover {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.footerIcons{
+    height: 20px;
+}
 /* .header{
     background-color: pink;
     margin-top: 150px;

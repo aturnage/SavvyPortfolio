@@ -11,30 +11,36 @@
     padding: 1em;
     margin: .25em;
 }
-.topPicVerbiage{
-    /* display: grid; */
-    /*justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;*/
+.footerGrid {
+    display: grid;
+    justify-content: space-around;
+    /* align-items: center;
+    text-align: center; */
+    text-transform: uppercase;
     /*font-family: "Alfa Slab One";*/
     /*font-family: "Abril Fatface";
     font-size: 20px;*/
-    /*background-color: #0099ff;*/
+    background-color: #0099ff;
+    margin: 0;
 }
-.topPicVerbiage > div {
-
+.footerGrid li{
+    list-style: none;
+    color: #383838;
+}
+.footerGrid img {
+    display: inline;
 }
 @media (min-width: 415px){
     #grid{
         grid-template-columns: repeat(3, 1fr);
     }
-    .topPicVerbiage{
+    .footerGrid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 .imageAtt {
     width: 100%;
+    border: 2px solid #0099ff;
 }
 #sampleHeader{
     text-align: center;
