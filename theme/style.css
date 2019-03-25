@@ -193,6 +193,10 @@ a {
 .footerIcons{
     height: 20px;
 }
+.melvin {
+  display: block;
+  margin: 0 auto;
+}
 /* .header{
     background-color: pink;
     margin-top: 150px;
