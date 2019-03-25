@@ -14,3 +14,7 @@ postRequest
     .catch(
         () => $content.text( "There was an error!" )
     );
+
+var getPosts = $.ajax( "https://jsonplaceholder.typicode.com/posts" );
+
+getPosts.then( ( posts ) => console.log( posts[0] ) );
